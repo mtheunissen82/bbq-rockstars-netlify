@@ -64,7 +64,7 @@ const RecipePage = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
+          <Helmet titleTemplate="%s | Recipe">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
