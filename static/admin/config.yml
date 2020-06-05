@@ -27,6 +27,14 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: "recipe_type"
+    label: "Recipe type"
+    # hide: true
+    delete: false
+    file: "src/recipe-type.yaml"
+    field:
+      - {label: "Type", name: "type", widget: "select", options: ["bbqr", "affiliate"]}
+
   - name: "recipe"
     label: "Recept"
     folder: "src/pages/recipes"
@@ -34,7 +42,9 @@ collections:
     slug: "/kookboek/{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "recipe-page"}
+      - {label: "Type", name: "type", widget: "select", options: [{label: "BBQ Rockstars", value: "bbqr"}, {label: "Affiliate": "affiliate"}]}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish", name: "publish", widget: "boolean", default: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
